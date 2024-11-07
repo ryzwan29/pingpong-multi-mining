@@ -18,10 +18,21 @@ This approach ensures that users can easily and effectively engage in DePIN mini
 - OG
 
 # Installation
-**[Register Here](https://app.pingpong.build/campaign?invite_code=eUh5jfAWRksE)**
+
+```
+██████╗ ██╗   ██ ╔███████╗ ██╗    ██╗  █████╗  ███╗   ██╗
+██╔══██╗ ██╗ ██║ ╚══ ███╔╝ ██║    ██║ ██╔══██╗ ████╗  ██║
+██████╔╝  ████║     ███╔╝  ██║ █╗ ██║ ███████║ ██╔██╗ ██║
+██╔══██╗   ██╔╝    ███╔╝   ██║███╗██║ ██╔══██║ ██║╚██╗██║
+██║  ██║   ██║    ███████╗ ╚███╔███╔╝ ██║  ██║ ██║ ╚████║
+╚═╝  ╚═╝   ╚═╝    ╚══════╝  ╚══╝╚══╝  ╚═╝  ╚═╝ ╚═╝  ╚═══╝
+```
+
+**✨[Register Here](https://app.pingpong.build/campaign?invite_code=eUh5jfAWRksE)✨**
 
 1. Log in to the [Multi-Mining App web interface](https://app.pingpong.build/mining/devices) and create a device.
 2. Copy the code
+<img width="100%" alt="image" src="create-pingpong-code-device.jpeg">
 
 **Create Screen Session**
 ```
