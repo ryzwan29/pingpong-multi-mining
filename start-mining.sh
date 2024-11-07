@@ -12,10 +12,7 @@ chmod +x PINGPONG
 while true; do
   # Meminta pengguna untuk memasukkan key
   echo -n "Masukkan key Anda: "
-  read -r user_key
-
-  # Menghapus whitespace (spasi atau karakter newline) di awal dan akhir input key
-  user_key=$(echo "$user_key" | xargs)
+  read user_key
 
   # Memeriksa apakah key kosong
   if [ -z "$user_key" ]; then
@@ -23,13 +20,20 @@ while true; do
     continue  # Kembali ke awal loop untuk meminta input ulang
   fi
 
-  # Jika key valid (tidak kosong dan bukan hanya spasi), keluar dari loop dan lanjutkan
-  break
-done
+  # Menjalankan file PINGPONG dengan key yang diberikan
+  echo "Menjalankan PINGPONG dengan key yang diberikan..."
+  ./PINGPONG --key="$user_key"
 
-# Menjalankan file PINGPONG dengan key yang diberikan
-echo "Menjalankan PINGPONG dengan key yang diberikan..."
-./PINGPONG --key="$user_key"
+  # Memeriksa apakah PINGPONG berhasil dijalankan
+  if [ $? -eq 0 ]; then
+    # Jika PINGPONG berhasil dijalankan, keluar dari loop
+    echo "Key valid, lanjutkan ke langkah berikutnya."
+    break
+  else
+    # Jika PINGPONG gagal (key salah), beri peringatan dan ulangi
+    echo "Key salah. Silakan masukkan key yang benar."
+  fi
+done
 
 # Menampilkan pesan selesai
 echo "Script selesai dijalankan."
