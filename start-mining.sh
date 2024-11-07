@@ -8,7 +8,7 @@ wget https://pingpong-build.s3.ap-southeast-1.amazonaws.com/linux/latest/PINGPON
 echo "Memberikan izin eksekusi pada file PINGPONG..."
 chmod +x PINGPONG
 
-# Looping untuk meminta key dari pengguna
+# Looping untuk meminta key dari pengguna hingga valid
 while true; do
   # Meminta pengguna untuk memasukkan key
   echo -n "Masukkan key Anda: "
@@ -17,17 +17,17 @@ while true; do
   # Memeriksa apakah key kosong
   if [ -z "$user_key" ]; then
     echo "Key tidak boleh kosong. Silakan masukkan key yang valid."
-    continue
+    continue  # Kembali ke awal loop untuk meminta input ulang
   fi
 
   # Verifikasi key (misalnya key yang benar adalah 'validkey')
   # Anda bisa mengganti kondisi berikut dengan validasi yang sesuai
   if [ "$user_key" != "validkey" ]; then
     echo "Key salah. Silakan coba lagi."
-    continue
+    continue  # Kembali ke awal loop untuk meminta input ulang
   fi
 
-  # Jika key benar, lanjutkan ke langkah berikutnya
+  # Jika key benar, keluar dari loop dan lanjutkan
   break
 done
 
